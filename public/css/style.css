@@ -172,11 +172,12 @@ ul#navbar-ul li{
     color: rgb(255, 255, 255 / 90%);
   }
 
-  section.top h3{
-    color: rgb(255, 255, 255 / 40%);
+  section.top h3, section.top h3 a{
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 12px;
+    color: #ffffffe8;
+    text-decoration: none;
   }
 
   section.bottom{
