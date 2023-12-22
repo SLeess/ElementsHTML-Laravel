@@ -15,6 +15,9 @@
     
     <!-- Fonts -->
 
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+  
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     @yield('line-styles')
@@ -48,5 +51,6 @@
         </section>
         <section class="bottom">&copy; 2023 S'</section>
     </footer>
+    @yield('imports')
 </body>
 </html>

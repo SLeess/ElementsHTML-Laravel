@@ -49,6 +49,11 @@ h1{
     font-family: var(--fonte-titulos);
 }
 
+h1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /*--------------------NAVBAR---------------------*/
 #navbar-img img{
     width: 50px;

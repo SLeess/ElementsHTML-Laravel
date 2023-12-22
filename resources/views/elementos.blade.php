@@ -17,9 +17,9 @@
             </p>
         </div>
     </div>
-
-    <div class="row table-responsive">
-        <table class="table table-striped">
+    <!-- row table-responsive -->
+    <div class="row">
+        <table id="table-elements" class="table table-striped table-hover">
         <thead>
             <tr>
             <th scope="col">#</th>
@@ -56,9 +56,17 @@
 </aside>
 @endsection
 
+@section('imports')
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="js/buscar.js"></script>
+@endsection
+
+
 @section('line-styles')
 <style>
-    /* Estilização para os parágrafos */
     .introduction {
         font-size: 15px;
         color: #000;
@@ -75,6 +83,10 @@
     }
     .show{
         display: inline-block;
+    }
+
+    tbody tr:hover td{
+        cursor: pointer;
     }
 </style>
 @endsection
