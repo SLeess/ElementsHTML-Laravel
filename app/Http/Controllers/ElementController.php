@@ -8,7 +8,10 @@ use App\Models\Element;
 class ElementController extends Controller
 {
     public function index(){
+        return view('inicio');
+    }
+    public function elementos(){
         $rows = Element::all();
-        return view('welcome', ['elements' => $rows]);
+        return view('elementos', ['elements' => $rows]);
     }
 }

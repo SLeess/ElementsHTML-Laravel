@@ -15,3 +15,4 @@ use App\Http\Controllers\ElementController;
 
 
 Route::get('/', [ElementController::class, 'index']);
+Route::get('/elementos', [ElementController::class, 'elementos']);

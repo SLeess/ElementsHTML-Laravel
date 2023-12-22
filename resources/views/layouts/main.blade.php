@@ -24,16 +24,7 @@
         @include('layouts.navbar')
     </header>
     <main id='conteudos' class='row'>
-        <section id="conteudo" class='col-10 offset-1 col-md-7 offset-md-1'>@yield('conteudo')</section>
-        <aside id="lateral" class='col-10 offset-1 offset-md-0 col-md-3'>
-            <h2 id='txtBuscar'>Buscar elemento</h2>
-            <div class="submit-line">
-                <input type="search" name="buscarElement" id="buscarElement" class="form-control">
-                <button class="submit-lente" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </aside>
+        @yield('ambienteDeConteudo')
     </main>
     <footer>
         <article>
