@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #DBD5D3;
+}
+
+#horizontal-bar{
+    width: 100vw;
+    height: 35vh;
+    max-height: 150px;
+    background-color: #DB6163;
+}
+
+h2{
+    color: red;
+}
