@@ -1,8 +1,28 @@
 @charset "UTF-8";
 
+/* Importe a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #DB472F;
+    --cor-conteudo: #fcf7f6;
+    --cor-navbar-condensada: #9C514F;
+    --cor-navbar-hover: #833424;
+    --cor-navbar: #DB6163;
+    --cor-aside-lateral: #db84726e;
+
+    --fonte-padrao: 'Josefin_Sans', sans-serif;
+    --fonte-titulos: "Righteous", sans-serif;
+    --fonte-a-navbar: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: var(--fonte-padrao);
 }
 
 body{
@@ -22,8 +42,11 @@ body{
     background-color: #DB6163;
 }
 
-h2{
-    color: red;
+h1{
+    color: var(--cor1);
+    font-size: 35px;
+    /* font-family: "Josefin_Sans variant0", sans-serif; */
+    font-family: var(--fonte-titulos);
 }
 
 /*--------------------NAVBAR---------------------*/
@@ -32,45 +55,106 @@ h2{
 }
 
 #navbarNav{
-    justify-content: space-evenly;
-    background-color: #9C514F;
-    padding: 2px 8px;
-    border: 2px solid #0000001f;
+    justify-content: flex-end;
+    padding: 2px 0; 
+    border: none;
 }
 
-@media (min-width: 992px){
+@media (max-width: 992px){
     #navbarNav{
-        background-color: #CC7468;
-        padding: 2px 0; 
-        border: none;
+        background-color: var(--cor-navbar-condensada);
+        padding: 2px 8px;
+        border: 2px solid #0000001f;
     }
 }
 
 #navbarNav a{
+    font-family: var(--fonte-a-navbar);
     font-size: 18px;
     color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 #navbarNav a:hover{
-    color: #833424;
+    color: var(--cor-navbar-hover);
+    cursor: pointer;
 }
 
 header{
-    background-color: #DB6163;
+    background-color: var(--cor-navbar);
     box-shadow: rgba(14, 30, 37, 0.09) 0px 2px 4px 0px, rgba(14, 30, 37, 0.11) 0px 2px 16px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ul#navbar-ul li{
+    margin: 0 10px;
 }
 
 /* -------------------- CONTEÚDO -------------------- */
 
 #conteudo{
-    width: 75vw;
     max-width: 1000px;
-    background-color: #fcf7f6;
-    border: 18px solid #fcf7f6c4;
+    background-color: var(--cor-conteudo);
+    border: 15px solid #fcf7f6c4;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.18) 0px 2px 16px 0px;
-    border-radius: 12;
-    margin: 15px auto;
-    min-height: 500px;
 }
 
+main#conteudos{
+    min-height: 500px;
+    margin-top: 105px;
+}
+
+aside#lateral{
+    background-color: var(--cor-aside-lateral);
+    border: 15px solid #db84720c;
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 2px 5px -1px, rgba(0, 0, 0, 0.7) 0px 1px 3px -1px;
+}
+
+#lateral, #conteudo{
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-radius: 0.5px;
+}
+
+@media (min-width: 992px){
+    aside#lateral {
+        max-width: 450px;
+    }
+}
+
+#txtBuscar{
+    color: var(--cor-navbar-hover);
+    font-size: 21px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: var(--fonte-a-navbar);
+}
 /* -------------------------------------------------- */
+
+.submit-lente {
+    position: relative;
+    top: -38px;
+    right: 0px;
+    height: 38px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 32px;
+  }
+  
+  .submit-line {
+    position: relative;
+    /* width: 200px; */
+  }
+  
+  .submit-line input {
+    width: 100%;
+    padding-left: 32px;
+  }

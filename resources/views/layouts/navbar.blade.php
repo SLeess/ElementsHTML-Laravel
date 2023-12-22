@@ -7,13 +7,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- <a href="" class="navbar-brand">
-                <img src="/img/icon.png" alt="icone Header">
-            </a> -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="navbar-ul">
                 {{--li.nav-item>a.nav-link--}}
-                <li class="nav-item"><a href="/" class="nav-link">Listar elementos</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Pesquisar existentes</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Elementos</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Outros Links</a></li>
                 <li class="nav-item"><a href="/" class="nav-link">Contato</a></li>
                 <li class="nav-item"><a href="/" class="nav-link">Sobre</a></li>
             </ul>
