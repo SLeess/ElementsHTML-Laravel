@@ -9,7 +9,7 @@
             <img src="/img/banner-web-dev.png" style="border-radius: 5px 4px 2px 6px;" alt="Imagem 1" class="img-fluid mb-3">
         </div>
         <div class="col-md-6">
-            <h3>Bem-vindo ao Meu Site</h3>
+            <h3 class="home">Bem-vindo ao Meu Site</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in arcu justo. 
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
@@ -27,7 +27,7 @@
             <img src="/img/banner-pessoa-prog.png" style="border-radius: 30px;" alt="Imagem 2" class="img-fluid mb-3">
         </div>
         <div class="col-md-6 order-md-1">
-            <h3>Objetivo do site</h3>
+            <h3 class="home">Objetivo do site</h3>
             <p>
                 Consectetur adipiscing elit. Nullam in arcu justo. Sed ut perspiciatis unde 
                 omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
@@ -42,24 +42,6 @@
 </section>
 @endsection
 
-@section('line-styles')
-<style>
-    #conteudo {
-        max-width: 95vw;
-        margin-top: 20px;
-    }
-
-    #conteudo img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    h3 {
-        color: #DB472F;
-    }
-
-    p {
-        color: #333;
-    }
-</style>
+@section('imports')
+<link rel="stylesheet" href="/css/elements.css">
 @endsection

@@ -57,36 +57,10 @@
 @endsection
 
 @section('imports')
+<link rel="stylesheet" href="/css/elements.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 <script src="js/buscar.js"></script>
-@endsection
-
-
-@section('line-styles')
-<style>
-    .introduction {
-        font-size: 15px;
-        color: #000;
-        margin-bottom: 20px;
-        line-height: 1.5;
-    }
-
-    .highlight {
-        font-size: 20px;
-        color: var(--cor-navbar);
-        font-weight: bold;
-        margin-bottom: 30px;
-        line-height: 1.6;
-    }
-    .show{
-        display: inline-block;
-    }
-
-    tbody tr:hover td{
-        cursor: pointer;
-    }
-</style>
 @endsection

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+#conteudo {
+    max-width: 95vw;
+    margin-top: 20px;
+}
+
+#conteudo img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3.home {
+    color: #DB472F;
+}
+
+p {
+    color: #333;
+}

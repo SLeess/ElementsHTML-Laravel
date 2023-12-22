@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.introduction {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.highlight {
+    font-size: 20px;
+    color: var(--cor-navbar);
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.show{
+    display: inline-block;
+}
+
+tbody tr:hover td{
+    cursor: pointer;
+}
