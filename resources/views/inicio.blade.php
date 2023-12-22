@@ -1,7 +1,5 @@
 @extends('layouts.main')
-
 @section('titulo', 'Menu principal')
-
 @section('ambienteDeConteudo')
 <section id="conteudo" class='col-10 offset-1 col-md-10 offset-md-1'>
 <div class="row">

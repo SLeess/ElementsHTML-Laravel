@@ -1,4 +1,6 @@
 @charset "UTF-8";
+
+/* --------------- Textos de Dropdown ----------------- */
 .introduction {
     font-size: 15px;
     color: #000;
@@ -20,3 +22,79 @@
 tbody tr:hover td{
     cursor: pointer;
 }
+
+/* -------------------- CONTEÚDO -------------------- */
+
+#conteudo{
+    max-width: 1000px;
+    background-color: var(--cor-conteudo);
+    border: 15px solid #fcf7f6c4;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.18) 0px 2px 16px 0px;
+}
+
+main#conteudos{
+    min-height: 500px;
+    margin-top: 105px;
+    margin-bottom: 20vh;
+}
+
+aside#lateral{
+    background-color: var(--cor-aside-lateral);
+    border: 15px solid #db84720c;
+    box-shadow: rgba(50, 50, 93, 0.45) 0px 2px 5px -1px, rgba(0, 0, 0, 0.7) 0px 1px 3px -1px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#lateral, #conteudo{
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-radius: 0.5px;
+}
+
+@media (min-width: 992px){
+    aside#lateral {
+        max-width: 450px;
+    }
+
+    main#conteudos{
+        margin-bottom: 14vh;
+    }
+}
+
+#txtBuscar{
+    color: var(--cor-navbar-hover);
+    font-size: 21px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: var(--fonte-a-navbar);
+}
+
+.submit-lente {
+    position: relative;
+    top: -38px;
+    right: 0px;
+    height: 38px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 32px;
+  }
+  
+  .submit-line {
+    position: relative;
+    /* width: 200px; */
+  }
+  
+  .submit-line input {
+    width: 100%;
+    padding-left: 32px;
+  }
+
+  .selectede td, .selectede th{
+    background-color: var(--cor-navbar);
+    color: #fff;
+    border: 1px 0.4px solid #0000002d;
+  }
+/* -------------------------------------------------- */

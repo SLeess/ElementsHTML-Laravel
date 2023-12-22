@@ -35,9 +35,9 @@
             <tr>
                 <th scope="row">{{ $element->id }}</th>
                 <td>{{ $element->type }}</td>
-                <td>{{ $element->description }}</td>
-                <td>{{ $element->css }}</td>
-                <td>{{ $element->html }}</td>
+                <td>{{ Str::limit($element->description, 25) }}</td>
+                <td>{{ Str::limit($element->css, 30) }}</td>
+                <td>{{ Str::limit($element->html, 30) }}</td>
                 <td>{{ $element->created_at }}</td>
             </tr>
             @endforeach
@@ -45,13 +45,16 @@
         </table>
     </div>
 </section>
-<aside id="lateral" class='col-10 offset-1 offset-md-0 col-md-3'>
-    <h2 id='txtBuscar'>Buscar elemento</h2>
-    <div class="submit-line">
+<aside id="lateral" class='d-flex col-10 offset-1 offset-md-0 col-md-3'>
+    <h2 id='txtBuscar' class="row">Buscar elemento</h2>
+    <div class="submit-line row">
         <input type="search" name="buscarElement" id="buscarElement" class="form-control">
         <button class="submit-lente" type="submit">
             <i class="fa fa-search"></i>
         </button>
+        <button type="button" class="disabled btn btn-danger btn-md row mt-3">Visualizar</button>
+        <button type="button" class="disabled btn btn-danger btn-md row mt-1">Editar</button>
+        <button type="button" class="disabled btn btn-danger btn-md row mt-1">Apagar</button>
     </div>
 </aside>
 @endsection

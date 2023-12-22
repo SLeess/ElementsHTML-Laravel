@@ -1,7 +1,9 @@
+var id = null;
+var dataTable;
 $(document).ready(function() {
-    var dataTable = $('#table-elements').DataTable({
+    dataTable = $('#table-elements').DataTable({
         "sDom": "<'row'<'col-sm-12'tr>>" + "<'card-footer p-0 pt-1'<'row'<'col-6'l><'col-6'p>>>",
-        "lengthMenu": [[5, 10, 25, 50, 100, -1], ["Exibir 5","Exibir 10", "Exibir 25", "Exibir 50", "Exibir 100", "Exibir Todos"]],
+        "lengthMenu": [[5], ["Exibir 5"]],
         "oLanguage": {
             "sEmptyTable": "Nenhum registro encontrado!",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -36,9 +38,7 @@ $(document).ready(function() {
             }
         }
     });
-});
 
-$(document).ready(function () {
     $("#buscarElement").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $("#table-elements tbody tr").filter(function() {
@@ -47,3 +47,18 @@ $(document).ready(function () {
         });
     });
 });
+
+$("#table-elements tbody").on('click', 'tr', function(){
+    // console.log(dataTable.row(this).data()[0]);  --- PEGA O ID DO ELEMENTO NO BANCO A PARTIR DA LINHA NO PHP
+    $("tr").removeClass('selectede');
+    if(id == dataTable.row(this).data()[0]){
+        id = null;
+        $(".btn").addClass('disabled');
+    } else{
+        id = dataTable.row(this).data()[0];
+        $(this).toggleClass('selectede');
+        $(".btn").removeClass('disabled');
+    }
+});
+
+
