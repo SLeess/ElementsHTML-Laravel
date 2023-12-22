@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('titulo')</title>
 
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     <!-- Fonts -->
 
     <!-- Styles -->
@@ -12,24 +18,14 @@
     @yield('line-styles')
 </head>
 <body>
-    <header id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbar">
-                <a href="" class="navbar-brand">
-                    <img src="/img/icon.png" alt="iconeHeader">
-                </a>
-            </div>
-            <ul class="navbar-nav">
-                {{--li.nav-item>a.nav-link--}}
-                <li class="nav-item"><a href="/" class="nav-link">Listar elementos</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Pesquisar existentes</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Sobre</a></li>
-            </ul>
-        </nav>
+    <header>
+        @include('layouts.navbar')
     </header>
     <div id="conteudo">
         @yield('conteudo')
     </div>
+    <footer>
+        
+    </footer>
 </body>
 </html>

@@ -11,6 +11,10 @@ body{
     background-color: #DBD5D3;
 }
 
+.row{
+    margin: 0;
+}
+
 #horizontal-bar{
     width: 100vw;
     height: 35vh;
@@ -21,3 +25,52 @@ body{
 h2{
     color: red;
 }
+
+/*--------------------NAVBAR---------------------*/
+#navbar-img img{
+    width: 50px;
+}
+
+#navbarNav{
+    justify-content: space-evenly;
+    background-color: #9C514F;
+    padding: 2px 8px;
+    border: 2px solid #0000001f;
+}
+
+@media (min-width: 992px){
+    #navbarNav{
+        background-color: #CC7468;
+        padding: 2px 0; 
+        border: none;
+    }
+}
+
+#navbarNav a{
+    font-size: 18px;
+    color: #fff;
+}
+
+#navbarNav a:hover{
+    color: #833424;
+}
+
+header{
+    background-color: #DB6163;
+    box-shadow: rgba(14, 30, 37, 0.09) 0px 2px 4px 0px, rgba(14, 30, 37, 0.11) 0px 2px 16px 0px;
+}
+
+/* -------------------- CONTEÚDO -------------------- */
+
+#conteudo{
+    width: 75vw;
+    max-width: 1000px;
+    background-color: #fcf7f6;
+    border: 18px solid #fcf7f6c4;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.18) 0px 2px 16px 0px;
+    border-radius: 12;
+    margin: 15px auto;
+    min-height: 500px;
+}
+
+/* -------------------------------------------------- */
