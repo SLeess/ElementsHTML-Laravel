@@ -64,6 +64,7 @@
         <button id="apagarBtnModal" type="button" class="disabled btn btn-danger btn-md row mt-1">Apagar</button>
     </div>
 </aside>
+
 <div class="modals">
     {{----------------MODAL DE EDIÇÃO----------------}}
     <div class="modal fade bd-example-modal-lg" id="EditarModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
