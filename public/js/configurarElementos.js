@@ -139,7 +139,9 @@ $("#salvarAlteracoesModalEditarBtn").on('click', function(){
     var css = $("#cssTextArea").val();
     var imgLink = $("#imgLinkInput").val();
 
-    if(!type || !description || !html || !css){ //|| !imgLink){
+    if(!imgLink){ imgLink = "null";}
+
+    if(!type || !description || !html || !css || !imgLink){
         alert('Erro! Não deixe nenhum input vazio!');
     } else{
         $.ajax({
