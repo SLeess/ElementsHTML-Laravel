@@ -16,3 +16,6 @@ use App\Http\Controllers\ElementController;
 
 Route::get('/', [ElementController::class, 'index']);
 Route::get('/elementos', [ElementController::class, 'elementos']);
+Route::get('/obter-detalhes-elemento/{id}', [ElementController::class, 'obterDetalhesElemento']);
+Route::put('/atualizar-elemento/{id}', [ElementController::class, 'atualizarElemento']);
+Route::put('/apagar-elemento/{id}', [ElementController::class, 'apagarElemento']);

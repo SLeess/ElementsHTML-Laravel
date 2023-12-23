@@ -98,3 +98,16 @@ aside#lateral{
     border: 1px 0.4px solid #0000002d;
   }
 /* -------------------------------------------------- */
+
+.txtGeral{
+    height: 180px;
+}
+
+#tituloLabelModalEditar{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal-header{
+    justify-content: center;
+}
