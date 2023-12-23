@@ -9,19 +9,7 @@
 
 @section('ambienteDeConteudo')
 <section id="conteudo" class='col-10 offset-1 col-md-7 offset-md-1'>
-    <div class="dropdown">
-        <h1 id="dropdownMenuButton" style="margin-bottom: 20px;white-space: normal;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Elementos para Desenvolvimento</h1>
-        <div class="dropdown-menu p-2" aria-labelledby="dropdownMenuButton" style="z-index: 999;">
-            <p class="introduction">
-                Bem-vindo ao nosso <strong>Sistema de gerenciamento de Elementos Web</strong>! 
-                <br><br>
-                Aqui, você pode encontrar e visualizar uma variedade de elementos prontos para uso em seus projetos. Desde barras de navegação elegantes até botões estilizados, nossa tabela contém uma ampla gama de componentes prontos para integrar às suas páginas web.
-            </p>
-            <p class="highlight">
-                Explore a tabela abaixo para obter detalhes sobre cada elemento, incluindo o tipo, descrição, código CSS e HTML.
-            </p>
-        </div>
-    </div>
+    @include('layouts.dropdowns.dropdownConfigLines')
     <!-- row table-responsive -->
     <div class="row">
         <table id="table-elements" class="table table-striped table-hover">
@@ -38,7 +26,7 @@
         </thead>
         <tbody>
             @foreach($elements as $element)
-            <tr>
+            <tr @if($element->type[0] == '#') class="deleted" @endif>
                 <th scope="row">{{ $element->id }}</th>
                 <td>{{ $element->type }}</td>
                 <td>{{ Str::limit($element->description, 25) }}</td>
@@ -67,48 +55,7 @@
 
 <div class="modals">
     {{----------------MODAL DE EDIÇÃO----------------}}
-    <div class="modal fade bd-example-modal-lg" id="EditarModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="tituloLabelModalEditar"></h5>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <form>
-                                <div class="form-group">
-                                    <label for="type-name" class="col-form-label">Tipo:</label>
-                                    <input type="text" class="form-control" id="typeInput" maxlength="60">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description-name" class="col-form-label">Descrição:</label>
-                                    <textarea class="form-control" id="descriptionTextArea" maxlength="255"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="html-code" class="col-form-label">HTML:</label>
-                                    <textarea class="form-control txtGeral" id="htmlTextArea"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="css-code" class="col-form-label">CSS:</label>
-                                    <textarea class="form-control" id="cssTextArea"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="img-link" class="col-form-label">Link de Imagem:</label>
-                                    <input type="text" class="form-control" id="imgLinkInput" maxlength="255">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelarModalEditarBtn">Cancelar</button>
-                    <button type="button" class="btn btn-danger" id="salvarAlteracoesModalEditarBtn">Salvar Alterações</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{---------------------------------------------}}
+    @include('layouts.modais.modalEditLine')
 </div>
 @endsection
 

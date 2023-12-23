@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" id="navbar-ul">
                 {{--li.nav-item>a.nav-link--}}
-                <li class="nav-item"><a href="#" class="nav-link">Visualizar Elementos</a></li>
+                <li class="nav-item"><a href="/conteudo" class="nav-link">Visualizar Elementos</a></li>
                 <li class="nav-item"><a href="/elementos" class="nav-link">Configurar Elementos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Outros Links</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>

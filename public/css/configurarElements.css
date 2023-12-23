@@ -97,6 +97,11 @@ aside#lateral{
     color: #fff;
     border: 1px 0.4px solid #0000002d;
   }
+
+  .deleted td, .deleted th{
+    background-color: var(--cor2);
+    color: #fff;
+  }
 /* -------------------------------------------------- */
 
 .txtGeral{

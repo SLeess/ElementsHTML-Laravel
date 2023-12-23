@@ -86,9 +86,27 @@ $("#apagarBtnModal").on('click', function(){
         type: 'GET',
         success: function(response) {
             type = response.type;
-            if(type[0] != "#" && type != null){
+            if(type[0] == "#"){
                 $.ajax({
-                    url: '/apagar-elemento/'+id,
+                    url: '/deletar-elemento/'+id,
+                    type: 'DELETE',
+                    data:{
+                        id: id
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(response){
+                        alert(response.message);
+                        location.reload();
+                    },
+                    error: function(error){
+                        console.log(error);
+                    }
+                });
+            } else if(type != null){
+                $.ajax({
+                    url: '/desativar-elemento/'+id,
                     type: 'PUT',
                     data:{
                         id: id
