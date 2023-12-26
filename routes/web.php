@@ -22,3 +22,6 @@ Route::put('/desativar-elemento/{id}', [ElementController::class, 'desativarElem
 Route::delete('/deletar-elemento/{id}', [ElementController::class, 'destroy']);
 
 Route::get('/conteudo', [ElementController::class, 'indexConteudo']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
