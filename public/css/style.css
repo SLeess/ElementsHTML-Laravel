@@ -28,8 +28,8 @@
 }
 
 body{
-    width: 95vw;
-    height: 100vh;
+    width: 98vw;
+    /* height: 100vh; */
     background-color: #DBD5D3;
 }
 
@@ -60,9 +60,13 @@ h1:hover{
     width: 50px;
 }
 
+header{
+    height: 74px;
+}
+
 #navbarNav{
     justify-content: flex-end;
-    padding: 2px 0; 
+    padding: 2px 0;
     border: none;
 }
 
@@ -102,11 +106,14 @@ header{
 ul#navbar-ul li{
     margin: 0 10px;
 }
-  /* -------------------- Footer -------------------- */
+/* -------------------- Footer -------------------- */
+
   footer{
-    /* margin-top: 120vh; */
+    margin-top: 1vh;
     position: absolute;
     left: 0; right: 0;
+    /* bottom: 0; */
+    width: 100%;
     padding-bottom: 20px;
     background-color: #5f302e;
     color: #f9f9f9;
