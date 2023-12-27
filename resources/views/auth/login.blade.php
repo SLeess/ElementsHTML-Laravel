@@ -1,7 +1,11 @@
+<!-- Pessoal Style -->
+<link rel="stylesheet" href="css/login.css">
+
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            {{-- <x-authentication-card-logo /> --}}
+            <img src="/img/icon.png" alt="icone Header">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -14,7 +18,7 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
+            <h1 class="text-center font-large text-xl">Element Sistem</h1>
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
@@ -32,15 +36,23 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-center mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Esqueci minha senha!') }}
                     </a>
                 @endif
+            </div>
+
+            <div class="flex items-center mt-4" style="justify-content: space-between">
+                <x-button class="me-4">
+                    <a href="{{ route('register') }}">
+                        {{ __('Cadastrar') }}
+                    </a>
+                </x-button>
 
                 <x-button class="ms-4">
-                    {{ __('Log in') }}
+                    {{ __('Login') }}
                 </x-button>
             </div>
         </form>

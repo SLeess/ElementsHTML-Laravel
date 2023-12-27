@@ -1,7 +1,8 @@
 @charset "UTF-8";
 #conteudo {
-    max-width: 95vw;
-    margin-top: 20px;
+    max-width: 97vw;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.18) 0px 2px 16px 0px;
+    margin: 100px auto;
 }
 
 #conteudo img {
