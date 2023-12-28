@@ -14,6 +14,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Pessoal Style -->
+        <link rel="stylesheet" href="css/login.css">
+
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -23,5 +26,11 @@
         </div>
 
         @livewireScripts
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.bg-gray-100').removeClass('bg-gray-100');
+            });
+        </script>
     </body>
 </html>

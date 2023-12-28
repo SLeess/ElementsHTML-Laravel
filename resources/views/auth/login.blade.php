@@ -1,11 +1,7 @@
-<!-- Pessoal Style -->
-<link rel="stylesheet" href="css/login.css">
-
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
             {{-- <x-authentication-card-logo /> --}}
-            <img src="/img/icon.png" alt="icone Header">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -25,14 +21,14 @@
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
+                <x-label for="password" value="{{ __('Senha') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ms-2 text-sm text-gray-600">{{ __('Lembrar conta') }}</span>
                 </label>
             </div>
 
@@ -58,3 +54,4 @@
         </form>
     </x-authentication-card>
 </x-guest-layout>
+

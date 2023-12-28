@@ -6,3 +6,8 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+
+#logo{
+    border-radius: 50%;
+    width: 120px;
+}
